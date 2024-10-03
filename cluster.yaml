@@ -1,5 +1,5 @@
 nodes:
-- address: {{ .secrets.SERVER_IP }}
+- address: 10.0.1.10
   port: "22"
   internal_address: 10.0.1.10
   role:
@@ -104,7 +104,7 @@ services:
     fail_swap_on: false
     generate_serving_certificate: false
 network:
-  plugin: flannel
+  plugin: calico
   options: {}
   mtu: 0
   node_selector: {}
@@ -144,7 +144,7 @@ ingress:
   default_http_backend_priority_class_name: ""
   nginx_ingress_controller_priority_class_name: ""
   default_ingress_class: null
-cluster_name: "Tecsci-K8S"
+cluster_name: "HagenDev"
 cloud_provider:
   name: ""
 prefix_path: ""
